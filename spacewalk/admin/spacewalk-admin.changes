@@ -1,3 +1,4 @@
+- add service to update configfile and introduce a backup scc user
 - change deprecated path /var/run into /run for systemd (bsc#1185059)
 
 -------------------------------------------------------------------
