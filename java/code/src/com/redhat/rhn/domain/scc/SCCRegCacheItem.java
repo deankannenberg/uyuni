@@ -259,7 +259,7 @@ public class SCCRegCacheItem extends BaseDomainHelper {
      * @param sccLoginIn The sccLogin to set.
      */
     public void setSccLogin(String sccLoginIn) {
-        sccPasswd = sccLoginIn;
+        sccLogin = sccLoginIn;
     }
 
     /**
