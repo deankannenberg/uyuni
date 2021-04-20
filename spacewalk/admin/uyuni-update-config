@@ -26,7 +26,9 @@ if os.path.exists(scc_cred_file):
                 uuidNum = v.strip()
                 break
 if not uuidNum:
-    uuidNum = "UY_{}".format(str(uuid.uuid4()).replace("-", ""))
+    # scc expects either a SCC machine login (must exists in SCC)
+    # or a UUID4 following rfc4122 to identify a anonyme proxy
+    uuidNum = str(uuid.uuid4())
 with open("/etc/rhn/rhn.conf", "a") as r:
     r.write("\n")
     r.write("server.susemanager.scc_backup_srv_usr = {}\n".format(uuidNum))
